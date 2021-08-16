@@ -1,0 +1,29 @@
+server:
+  port: 7003
+  servlet:
+    contextPath: /bard
+old-st:
+  database:
+    accessKey: key1
+    secretKey: key1
+    dynamoDbEndPoint: http://localhost:8000/data
+    region: us-east-2
+    dynamoDbPrefix: dev
+amazon:
+  dynamodb:
+    endpoint: http://localhost:8000/
+  aws:
+    accesskey: key1
+    secretkey: key2
+spring:
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only
+        gsiProjectionType: ALL
+        readCapacity: 10
+        writeCapacity: 1
+
+logging:
+  level:
+    org.springframework.data.repository: DEBUG
